@@ -6,7 +6,6 @@ class DocsController < ApplicationController
   end
 
   def show
-
   end
 
   def new
@@ -34,7 +33,7 @@ class DocsController < ApplicationController
   end
 
   def destroy
-    @doc.destroy
+    @doc.destroy!
     redirect_to docs_path
   end
 
@@ -46,7 +45,6 @@ class DocsController < ApplicationController
 
   def doc_params
     params.require(:doc).permit(:title, :content)
-
   end
 
 end
